@@ -2,9 +2,9 @@
 permalink:      /:year-:month-:day/:title
 
 # Setup
-title:          Jihye Leee
+title:          SilNex
 baseurl:        ""
-url:            "http://www.jihyeleee.com"
+url:            "http://silnex.github.io"
 
 # Assets
 sass:
@@ -16,13 +16,12 @@ markdown:       kramdown
 
 # About
 author:
-  name:         Jihye Leee
-  url:          http://jihyeleee.com/
-  email:        iam.leejihye@gmail.com  
-  github:       iamleejihye
-  twitter:      playpingpong
+  name:         Lee SeungHyun
+  url:          http://silnex.kr/
+  email:        silnex@silnex.kr  
+  github:       silnex
 
 # Custom vars
 version:        3.4.1
 github:
-  repo:         https://github.com/iamleejihye/iamleejihye.github.io
+  repo:         https://github.com/silnex/silnex.github.io
