@@ -15,7 +15,7 @@ published: true
     i'M silnex,
     </h1>
     <h1 class="intro">
-      	<div class="intro-link">Hack to dev, Dev for hack
+      	<div class="intro-link">Developer based in hack
             <a class="transition" href="https://silnex.kr/" target="_blank">
                 silnex.kr
             </a>
