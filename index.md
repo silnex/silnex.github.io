@@ -1,28 +1,29 @@
 ---
 layout: default
-title: Jihye Leee
+title: silnex
 main: true
-subtitle: Digital Product Designer Jihye Leee at RIDI
+subtitle: Hack to dev
 description: >-
-  Jihye Leee, who is a Digital Product Designer based in Seoul, South Korea. |
-  '이지혜' 디지털 프로덕트 디자이너입니다. 리디에서 일합니다.
+  silnex, who is a backend developer based in hack, South Korea. |
+  'Lee SeungHyun' 해킹하는 개발자 입니다.
 published: true
 ---
+
 <div class="intro-animation">
 <section class="explanation">
     <h1 class="intro">
     i'M silnex,
     </h1>
     <h1 class="intro">
-      	<div class="intro-link">I want to do well in development.
-            <a class="transition" href="http://silnex.kr/" target="_blank">
+      	<div class="intro-link">Hack to dev, Dev for hack
+            <a class="transition" href="https://silnex.kr/" target="_blank">
                 silnex.kr
             </a>
             <div class="underline-mask transition"></div>
             <div class="underline"></div>
         </div>.
     </h1>
-    <h2 class="intro">디자인하는 백론트 개발자를 지향합니다.</h2>
+    <h2 class="intro">해킹하는 백론트 개발자입니다.</h2>
 </section>
 </div>
 {% include resume.html %}
