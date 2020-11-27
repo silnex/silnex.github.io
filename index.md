@@ -1,6 +1,6 @@
 ---
 layout: default
-title: silnex
+title: SilNex
 main: true
 subtitle: Hack to dev
 description: >-
