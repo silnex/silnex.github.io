@@ -1,9 +1,9 @@
 ---
 layout: post
 title: silnex
-subtitle: 이지혜
+subtitle: Lee SeungHyun
 type: About
-author: Jihye Lee
+author: Lee SeungHyun
 permalink: /about/
 post-header: true
 header-img: img/about.jpg
