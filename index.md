@@ -14,7 +14,7 @@ published: true
     i'M silnex,
     </h1>
     <h1 class="intro">
-      	<div class="intro-link">I want to do well in development. <del>design too</del>
+      	<div class="intro-link">I want to do well in development.
             <a class="transition" href="http://silnex.kr/" target="_blank">
                 silnex.kr
             </a>
