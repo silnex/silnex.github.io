@@ -2,7 +2,7 @@
 layout: post
 title:  "GitHub Page로 이사"
 subtitle: "bye bye wordpress"
-type: "Development"
+type: "Diary"
 blog: true
 text: true
 author: "silnex"
