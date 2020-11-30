@@ -5,6 +5,7 @@ description: 제가 관심있는 것들이 올라와요
 main: true
 post-header: true
 header-img: img/space.jpg
+header-class: space-background
 ---
 
 <ul class="catalogue">
