@@ -1,5 +1,10 @@
 # My first git page blog
+<h3 style="text-align: right"><a href="https://silnex.github.io">silnex.github.io</a></h3><br>
 
+![image](img/default.jpg)
+
+
+### OR blog.silnex.kr
 
 ## Forked info
 
