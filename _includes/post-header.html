@@ -1,2 +1,2 @@
-<div class="post-header loading-animation {% if page.header-class %}{{ page.header-class }}{% endif %}" style="background-image: url('{{ page.header-img }}')">
+<div class="post-header loading-animation {% if page.header-class %}{{ page.header-class }}{% endif %}" style="background-image: url('{% if page.header-img %}{{ page.header-img }}{% else %}{{ '/img/default.jpg' }}{% endif %}')">
 </div>
