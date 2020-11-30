@@ -6,7 +6,7 @@ type: About
 author: Lee SeungHyun
 permalink: /about/
 post-header: true
-header-img: img/about.jpg
+header-img: img/moon.jpg
 published: true
 ---
 

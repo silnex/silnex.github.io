@@ -3,8 +3,8 @@ layout: default
 title: "Blog"
 description: 제가 관심있는 것들이 올라와요
 main: true
-project-header: true
-header-img: img/about.jpg
+post-header: true
+header-img: img/space.jpg
 ---
 
 <ul class="catalogue">
