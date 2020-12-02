@@ -15,13 +15,14 @@ published: true
     i'M silnex,
     </h1>
     <h1 class="intro">
-      	<div class="intro-link">Developer based in hack
+        Developer based in hack.
+      	<div class="intro-link">
             <a class="transition" href="https://silnex.kr/" target="_blank">
                 silnex.kr
             </a>
             <div class="underline-mask transition"></div>
             <div class="underline"></div>
-        </div>.
+        </div>
     </h1>
     <h2 class="intro">해킹하는 백론트 개발자입니다.</h2>
 </section>
