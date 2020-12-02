@@ -1,8 +1,8 @@
 - name: PHP
-- name: Laravel (can with Livewire)
+- name: Laravel, livewire
 - name: Sleep
-- name: Javascript [vanilla, jquery, react, alpinejs]
-- name: CSS [bootstrap, tailwindcss]
+- name: Javascript, vanilla, jquery, react, alpinejs
+- name: CSS, bootstrap, tailwindcss
 - name: EAT
-- name: DevOps (docker, composer, i'll k8s)
+- name: DevOps, docker, composer
 - name: WebHack
