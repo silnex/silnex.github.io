@@ -7,6 +7,7 @@ blog: true
 text: true
 author: "silnex"
 post-header: true
+header-img: img/machine.jpg
 order: 2
 tags: ['laravel', 'macro', 'mixin', 'tip']
 ---
