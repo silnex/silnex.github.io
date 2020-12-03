@@ -11,3 +11,5 @@ published: true
 ---
 
 # hELLO i'M silnex!
+
+웹 해킹하는 웹 개발자 Lee Seung-Hyun 입니다.
