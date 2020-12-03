@@ -3,8 +3,8 @@ permalink:      /:year-:month-:day/:title
 
 # Setup
 title:          SilNex
-baseurl:        "http://silnex.github.io"
-url:            "http://silnex.github.io"
+baseurl:        "https://silnex.github.io"
+url:            "https://silnex.github.io"
 
 # Assets
 sass:
