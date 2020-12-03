@@ -5,10 +5,9 @@ subtitle: "With Mixin"
 type: "Laravel"
 blog: true
 text: true
-draft: true
 author: "silnex"
 post-header: true
-order: 1
+order: 2
 tags: ['laravel', 'macro', 'mixin', 'tip']
 ---
 
@@ -104,26 +103,6 @@ class AppServiceProvider extends ServiceProvider
 
 위와 같이 등록했다면, 이제 `Query` Class를 사용하는 모든 곳에서 `->search(...)`을 사용할 수 있습니다.
 
-## Laravel Mixin
-
-이러한 메크로가 정말 편리하다는 것은 알겠지만, 이런 코드가 점점 늘어날 수 록 `AppServiceProvider`의 `register`에서만 관리한다는건 복잡한 일이 될 수 밖에 없습니다.
-
-이러한 복잡성을 피하기 위한 방법이 2가지가 있습니다.
-
-### 새로운 Service Provider 추가
-
-```php
-//
-```
-
-### Mixin
-
-```php
-//
-```
-
----
-
 ## Macro 동작 방식
 
 위에서도 설명했듯이 Macro는 동적으로 메소드를 추가 하는 것 입니다.  
@@ -172,3 +151,139 @@ public function __call($method, $parameters)
 
 이 부분 까지 읽으셧다면, 정말 관심이 많으신 분이시겠지만,  
 이 부분이 이해되지 않으신다고 하셔도 [PHP Magic 메소드](https://www.php.net/manual/en/language.oop5.magic.php)와 PHP의 [기본적](https://www.php.net/manual/en/language.oop5.static.php)으로 [제공되어지는 부분](https://www.php.net/manual/en/class.closure.php)을 제외하고 생각하신다면, 좀 더 이해가 편하실 수도(?) 있습니다.
+
+---
+
+## Laravel Mixin
+
+이러한 메크로가 정말 편리하다는 것은 알겠지만, 이런 코드가 점점 늘어날 수 록 `AppServiceProvider`의 `register`에서만 관리한다는건 복잡한 일이 될 수 밖에 없습니다.
+
+이러한 복잡성을 피하기 위한 방법이 2가지가 있습니다.
+
+### 방법 1. 새로운 Service Provider 추가
+
+이러한 복잡성을 낮추기 위해 `AppServiceProvider`에 몰아 넣는 것이 아닌 각각의 Provider를 생성해 내용을 분리해 두는 방법이 있습니다.
+
+```php
+/** app/Providers/QueryServiceProvider.php */
+
+use Illuminate\Database\Query\Builder;
+
+class QueryServiceProvider extends ServiceProvider
+{
+    // ...
+    public function register()
+    {
+        Builder::macro('search', function (array $fields, string $searchString) {
+            // ...
+        });
+    }
+    // ...
+}
+```
+
+하지만 이런 방식으로 Provider를 생성하면 `config/app.php`에
+```php
+'providers' => [
+    // Other Service Providers
+
+    App\Providers\QueryServiceProvider::class,
+],
+```
+위와 같이 Provider를 등록해주어야 합니다. 그러다보니 저는 Service Provider를 등록하는 것 보다는 다음 방법인 Mixin 을 사용한 방식을 선호하는 편입니다.
+
+### 방법 2. Mixin
+
+Mixin은 일일히 `macro`메소드를 사용하지 않고 마치 PHP의 Trait 처럼 사용할 수 있는 Macro 묶음을 한번에 등록 할 수 있는 방식입니다.
+
+#### Mixin Class
+```php
+/** app/Mixins/AppServiceProvider.php */
+
+class QueryBuilderMixin
+{
+    public function search()
+    {
+        return function (array $fields, string $searchString) {
+            foreach ($fields as $field) {
+                $this->orWhere($field, 'like', '%' . $searchString . '%');
+            }
+
+            return $this;
+        }
+    }
+
+    // other macros
+}
+```
+기존의 Trait, Class와 모양이 다른 것을 알 수 있습니다.  
+Mixin Class의 구성 방식은 메소드 이름이 Macro의 이름, 그리고 그 메소드는 기존의 *Callback*을 반환합니다.
+
+이렇게 생성한 Mixin Class를 `macro` 대신 `mixin`메소드의 인자값으로 전달해 주면됩니다.
+
+```php
+/** app/Providers/AppServiceProvider.php */
+// ...
+    public function register()
+    {
+        \Illuminate\Database\Query\Builder::mixin(new \App\Mixins\QueryBuilderMixin);
+    }
+// ...
+```
+
+이렇게 여러메크로를 한번에 등록할 수 있습니다. 하지만, [`::class`](https://www.php.net/manual/en/language.oop5.basic.php#language.oop5.basic.class.class)를 사용해 아래 처럼 좀 더 다듬을 수 있습니다.
+
+```php
+/** app/Providers/AppServiceProvider.php */
+// ...
+    protected array $mixins = [
+        \Illuminate\Database\Query\Builder::class => \App\Mixins\QueryBuilderMixin::class,
+        // other mixins
+    ];
+
+    public function register()
+    {
+        foreach ($this->mixins as $class => $mixin) {
+            $class::mixin(new $mixin);
+        }
+    }
+// ...
+```
+
+이런식으로 한다면 관리도 편하고 분기문을 통해 production환경과 test 환경에서 사용할 Mixin들을 따로 등록 할 수 있다.
+
+## Mixin 동작 방식
+
+Mixin은 PHP의 [`ReflectionClass`](https://php.net/manual/en/class.reflectionclass.php)을 사용하여 돌아가는데, 코드를 보면 아래와 같습니다.
+
+```php
+// ...
+    public static function mixin($mixin, $replace = true)
+    {
+        $methods = (new ReflectionClass($mixin))->getMethods(
+            ReflectionMethod::IS_PUBLIC | ReflectionMethod::IS_PROTECTED
+        );
+
+        foreach ($methods as $method) {
+            if ($replace || ! static::hasMacro($method->name)) {
+                $method->setAccessible(true);
+                static::macro($method->name, $method->invoke($mixin));
+            }
+        }
+    }
+// ...
+```
+
+순서대로 설명하자면, 
+1. ReflectionClass를 사용해 전달받은 Mixin Class를 Reflection 합니다.
+2. 그 중 public 메소드와 protected 메소드를 가져옵니다.
+3. 각각의 메소드의 이름을 macro의 이름으로 메소드의 return 값을 macro로 등록합니다.
+
+위와 같이 돌아가면서 결국 Mixin Class에 등록된 메소드를 각각 Macro로 등록하는 것을 확인할 수 있습니다.
+
+---
+
+## 마무리
+원래는 간단하게 Macro에 대해서 정리하려고 했지만, 생각보다 Macro가 많아질 수록 코드가 복잡해지고 ServiceProvider로 분리하던 중 좀 더 나은 방식이 있을까 하고 찾아보던중에 발견한 Mixin에 대해서 까지 작성하면서 내용이 많아졌습니다;;
+
+하지만 이런 내용을 보고 laravel의 코드를 보면서 그 코드상에 있던 또 다른 방식을 알게되는 과정은 언제 격어도 참 흥미로운 것같습니다.
