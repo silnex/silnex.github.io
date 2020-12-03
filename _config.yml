@@ -3,7 +3,7 @@ permalink:      /:year-:month-:day/:title
 
 # Setup
 title:          SilNex
-baseurl:        ""
+baseurl:        "http://silnex.github.io"
 url:            "http://silnex.github.io"
 
 # Assets
@@ -22,6 +22,6 @@ author:
   github:       silnex
 
 # Custom vars
-version:        3.4.1
+version:        1.0.1
 github:
   repo:         https://github.com/silnex/silnex.github.io
