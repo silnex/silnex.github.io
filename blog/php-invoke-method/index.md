@@ -3,9 +3,10 @@ layout: post
 title: "__invoke PHP 매직 메소드"
 subtitle: "__invoke php magic method"
 type: "PHP"
+created_at: "2020-12-21T12:00:00+09:00"
+updated_at: "2020-12-22T15:00:00+09:00"
 blog: true
 text: true
-draft: true
 author: "silnex"
 post-header: true
 header-img: "img/magic.jpg"
@@ -21,7 +22,8 @@ IDE의 정적 분석을 어렵게 하기에 많은 말이 있습니다만, 이�
 
 ## Form
 `public __invoke(...$values) : mixed`  
- - `__invoke` 메소드는 반드시 public visibility를 가져야합니다.  
+ - `__invoke` 메소드는 반드시 public visibility를 가져야합니다.
+ - `__invoke` 메소드는 `static` 을 가질 수 없습니다.  
 [Document](https://www.php.net/manual/en/language.oop5.magic.php#object.invoke)
 
 ### Detail
@@ -32,30 +34,31 @@ IDE의 정적 분석을 어렵게 하기에 많은 말이 있습니다만, 이�
 ```php
 class CallableClass
 {
-    public function __construct($x)
-    {
-        var_dump($x);
-    }
-
     public function __invoke($x)
     {
         var_dump($x);
+        return $this;
+    }
+    
+    public function method()
+    {
+        var_dump('called class method');
     }
 }
+
 $obj = new CallableClass(1);
-$obj(2);
-$obj(3);
-echo "\n";
-(new CallableClass(1))(2);
-echo "\n";
+$obj('call invoke')->a();
 var_dump(is_callable($obj));
 ```
 
 ## Result
 ```
-int(1) int(2) int(3)
-int(1) int(2)
+string(11) "call invoke"
+string(1) "called class method"
 bool(true)
 ```
 
 ## Description
+ - `__invoke` 는 `__construct`와 다르게 `new`키워드로 선언할 때는 실행 되지 않습니다.  
+ - `__invoke` 메소드가 선언된 클래스는 [`is_callable`](https://www.php.net/manual/en/function.is-callable.php)함수로 호출 가능하다 라고 표시됩니다.  
+ - `$this`를 반환해 클래스 메소드들을 호출 할 수 있습니다. 
