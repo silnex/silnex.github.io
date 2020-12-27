@@ -9,8 +9,9 @@ header-class: space-background
 <ul class="catalogue">
 {% assign sorted = site.pages | sort: 'order' | reverse %}
 {% for page in sorted %}
-{% if page.blog == true %}
-{% include post-list.html %}
-{% endif %}
+  {% if page.hidden == true %}{% continue %}{% endif %}
+  {% if page.blog == true %}
+    {% include post-list.html %}
+  {% endif %}
 {% endfor %}
 </ul>
