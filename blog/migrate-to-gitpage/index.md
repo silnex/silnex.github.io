@@ -3,6 +3,8 @@ layout: post
 title:  "GitHub Page로 이사"
 subtitle: "bye bye wordpress"
 type: "Diary"
+created_at: "2020-12-01"
+updated_at: "2020-12-27"
 blog: true
 text: true
 author: "silnex"

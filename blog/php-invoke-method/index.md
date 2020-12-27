@@ -3,8 +3,8 @@ layout: post
 title: "__invoke PHP 매직 메소드"
 subtitle: "__invoke php magic method"
 type: "PHP"
-created_at: "2020-12-21T12:00:00+09:00"
-updated_at: "2020-12-22T15:00:00+09:00"
+created_at: "2020-12-21"
+updated_at: "2020-12-22"
 blog: true
 text: true
 author: "silnex"

@@ -3,6 +3,8 @@ layout: post
 title:  "Laravel의 Macro"
 subtitle: "With Mixin"
 type: "Laravel"
+created_at: "2020-12-01"
+updated_at: "2020-12-27"
 blog: true
 text: true
 author: "silnex"
