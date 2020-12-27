@@ -15,7 +15,7 @@ tags: ['github', 'github-action', 'troubleshooting', 'ci/cd']
 ---
 
 ## TL;TR
-> SQLite 에선 `ON CONFLICT, DO UPDATE`(일명 Upsert) 는 `3.24.0 (2018-06-04)`버전에서 추가 되었으나, `ubuntu-18.04`에선 SQLite 버전이 낮아 문법 오류가 난다. [laravel.yml](#최종-laravel.yml)
+> SQLite 에선 `ON CONFLICT, DO UPDATE`(일명 [Upsert](https://www.sqlite.org/lang_upsert.html)) 는 `3.24.0 (2018-06-04)`버전에서 추가 되었으나, `ubuntu-18.04`에선 SQLite 버전이 낮아 문법 오류가 난다. [laravel.yml](#최종-laravel.yml)
 
 ----
 
@@ -110,10 +110,10 @@ PHPUnit 9.5.0 by Sebastian Bergmann and contributors.
 
 내용을 보니 결국 버전이 맞지 않아 발생한 문제란것을 알게 되어 여기에 나온 방법으로 진행하려고 했다가. 먼가 쎄한 기분에 [Action에서 제공하는 가상 환경](https://github.com/actions/virtual-environments)에서 `ubuntu-latest`가 몇 버전인지 확인했는데..
 
-| Environment | YAML Label | Included Software | Latest Release & Rollout Progress |
-| --------------------|---------------------|--------------------|---------------------|
-| Ubuntu 20.04 | `ubuntu-20.04` | [ubuntu-20.04] | [![](https://actionvirtualenvironmentsstatus.azurewebsites.net/api/status?imageName=ubuntu20&badge=1)](https://actionvirtualenvironmentsstatus.azurewebsites.net/api/status?imageName=ubuntu20&redirect=1)
-| Ubuntu 18.04 | `ubuntu-latest` or `ubuntu-18.04` | [ubuntu-18.04] | [![](https://actionvirtualenvironmentsstatus.azurewebsites.net/api/status?imageName=ubuntu18&badge=1)](https://actionvirtualenvironmentsstatus.azurewebsites.net/api/status?imageName=ubuntu18&redirect=1)
+| Environment | YAML Label |
+| --------------------|-------------------- |
+| Ubuntu 20.04 | `ubuntu-20.04` |
+| Ubuntu 18.04 | `ubuntu-latest` or `ubuntu-18.04` |
 
 <p style="text-align:center;font-size:12px"><del>속앗다...</del></p>
 
