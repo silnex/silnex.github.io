@@ -20,6 +20,11 @@ layout: default
         <h2 class="post-subtitle">
             {{ page.subtitle }}
         </h2>
+        {% if page.updated_at %}
+        <h3 class="post-date">
+            {{ page.updated_at }}
+        </h3>
+        {% endif %}
     </div>
     
 <!--포트폴리오 상단 정보-->

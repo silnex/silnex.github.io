@@ -270,6 +270,14 @@ sup {
   margin: 32px 0;
 }
 
+.post-info {
+  padding: 0 0 60px 0;
+
+  @media (max-width: $break-small) {
+    padding: 0 0 80px 0;
+  }
+}
+
 .post-info > h1.post-title {
   padding: 0 0 12px 0;
   font-weight: 700;
@@ -285,7 +293,7 @@ sup {
 }
 
 .post-info > h2.post-subtitle {
-  padding: 0 0 60px 0;
+  padding: 0 0 30px 0;
   font-weight: 400;
   font-size: 22px;
   color: $grey-1;
@@ -293,7 +301,18 @@ sup {
 
   @media (max-width: $break-small) {
     font-size: 20px;
-    padding: 0 0 90px 0;
+  }
+}
+
+.post-info > h3.post-date {
+  color: $grey-2;
+  font-size: 15px;
+  font-weight: 400;
+  text-align: right;
+
+  @media (max-width: $break-small) {
+    font-size: 12px;
+    text-align: left;
   }
 }
 
