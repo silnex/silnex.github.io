@@ -5,7 +5,7 @@ permalink:      /:year-:month-:day/:title
 title:          SilNex
 baseurl:        "https://silnex.github.io"
 url:            "https://silnex.github.io"
-description:    "해킹하는 개발자"
+description:    "해킹하는 백론트 개발자"
 
 # Assets
 sass:
