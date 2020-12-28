@@ -1,28 +1,28 @@
 # Permalinks
-permalink:      /:year-:month-:day/:title
+permalink: /:year-:month-:day/:title
 
 # Setup
-title:          SilNex
+title: SilNex
 # baseurl:        "https://silnex.github.io"
-url:            "https://silnex.github.io"
-description:    "해킹하는 백론트 개발자"
+url: "https://silnex.github.io"
+description: "해킹하는 백론트 개발자"
 
 # Assets
 sass:
-  sass_dir:     _sass
-  style:        :compressed
+  sass_dir: _sass
+  style: :compressed
 
 # Build settings
-markdown:       kramdown
+markdown: kramdown
 
 # About
 author:
-  name:         Lee SeungHyun
-  url:          http://silnex.kr/
-  email:        silnex@silnex.kr  
-  github:       silnex
+  name: Lee SeungHyun
+  url: http://silnex.kr/
+  email: silnex@silnex.kr
+  github: silnex
 
 # Custom vars
-version:        1.0.1
+version: 1.0.1
 github:
-  repo:         https://github.com/silnex/silnex.github.io
+  repo: https://github.com/silnex/silnex.github.io
