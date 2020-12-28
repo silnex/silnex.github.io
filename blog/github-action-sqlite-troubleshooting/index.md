@@ -2,6 +2,7 @@
 layout: post
 title: "Github Action SQLITE \"ON CONFLICT, DO UPDATE\" Syntax error"
 subtitle: "SQLITE UPSERT"
+description: "SQLite의 Upsert 구문에 대한 설명과 Github Action에서의 SQLite 버전 오류로 인해 발생했던 내용에 대해서 다뤄봅니다."
 type: "CI/CD"
 created_at: "2020-12-27"
 updated_at: "2020-12-27"

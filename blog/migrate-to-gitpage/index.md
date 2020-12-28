@@ -2,6 +2,7 @@
 layout: post
 title:  "GitHub Page로 이사"
 subtitle: "bye bye wordpress"
+description: "https://blog.silnex.kr 에서 silnex.github.io로 플랫폼을 바꿔보았습니다!"
 type: "Diary"
 created_at: "2020-12-01"
 updated_at: "2020-12-27"

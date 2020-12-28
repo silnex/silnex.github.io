@@ -2,6 +2,7 @@
 layout: post
 title: "__invoke PHP 매직 메소드"
 subtitle: "__invoke php magic method"
+description: "PHP의 매직 메소드인 __invoke에 대해서 알아보고 몇가지 활용 방법에 대해서 알아보는 포스트입니다."
 type: "PHP"
 created_at: "2020-12-21"
 updated_at: "2020-12-22"

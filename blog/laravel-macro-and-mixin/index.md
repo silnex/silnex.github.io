@@ -2,6 +2,7 @@
 layout: post
 title:  "Laravel의 Macro"
 subtitle: "With Mixin"
+description: "Laravel의 Macro와 이를 쉽게 관리할 수 있는 Mixin에 대해 알아봅니다."
 type: "Laravel"
 created_at: "2020-12-01"
 updated_at: "2020-12-27"
