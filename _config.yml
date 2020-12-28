@@ -3,7 +3,7 @@ permalink:      /:year-:month-:day/:title
 
 # Setup
 title:          SilNex
-baseurl:        "https://silnex.github.io"
+# baseurl:        "https://silnex.github.io"
 url:            "https://silnex.github.io"
 description:    "해킹하는 백론트 개발자"
 
