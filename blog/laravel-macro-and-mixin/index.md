@@ -5,7 +5,7 @@ subtitle: "With Mixin"
 description: "Laravel의 Macro와 이를 쉽게 관리할 수 있는 Mixin에 대해 알아봅니다."
 type: "Laravel"
 created_at: "2020-12-01"
-updated_at: "2020-12-27"
+updated_at: "2020-12-28"
 blog: true
 text: true
 author: "silnex"
@@ -202,7 +202,7 @@ Mixin은 일일히 `macro`메소드를 사용하지 않고 마치 PHP의 Trait �
 
 #### Mixin Class
 ```php
-/** app/Mixins/AppServiceProvider.php */
+/** app/Mixins/QueryBuilderMixin.php */
 
 class QueryBuilderMixin
 {
