@@ -1,5 +1,6 @@
 ---
 layout: post
+id: 2
 title:  "Laravel의 Macro"
 subtitle: "With Mixin"
 description: "Laravel의 Macro와 이를 쉽게 관리할 수 있는 Mixin에 대해 알아봅니다."
@@ -13,6 +14,7 @@ post-header: true
 header-img: "img/machine.jpg?refresh"
 order: 2
 tags: ['laravel', 'macro', 'mixin', 'tip']
+comments: true
 ---
 
 # Laravel Macro 소개

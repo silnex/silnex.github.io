@@ -1,5 +1,6 @@
 ---
 layout: post
+id: 1
 title:  "GitHub Page로 이사"
 subtitle: "bye bye wordpress"
 description: "https://blog.silnex.kr 에서 silnex.github.io로 플랫폼을 바꿔보았습니다!"
@@ -12,6 +13,7 @@ author: "silnex"
 post-header: true
 order: 1
 tags: ['diary']
+comments: true
 ---
 
 # Hello GitHub Page

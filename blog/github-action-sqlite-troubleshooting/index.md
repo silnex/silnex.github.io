@@ -1,5 +1,6 @@
 ---
 layout: post
+id: 4
 title: "Github Action SQLITE \"ON CONFLICT, DO UPDATE\" Syntax error"
 subtitle: "SQLITE UPSERT"
 description: "SQLite의 Upsert 구문에 대한 설명과 Github Action에서의 SQLite 버전 오류로 인해 발생했던 내용에 대해서 다뤄봅니다."
@@ -13,6 +14,7 @@ post-header: true
 header-img: "img/github.jpg"
 order: 4
 tags: ['github', 'github-action', 'troubleshooting', 'ci/cd']
+comments: true
 ---
 
 ## TL;TR
