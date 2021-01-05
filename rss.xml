@@ -14,7 +14,7 @@ layout: null
     <generator>Jekyll v{{ jekyll.version }}</generator>
     {% assign sorted = site.pages | sort: 'order' | reverse %}
     {% for page in site.pages limit:10 %}
-      {% if page.blog == true %}
+      {% if page.blog == true and page.draft != true %}
         <item>
           <title>{{ page.title | xml_escape }}</title>
           <description>{%if page.description %}{{ page.description | xml_escape }}{% else %}{{ page.subtitle }}{% endif %}</description>
