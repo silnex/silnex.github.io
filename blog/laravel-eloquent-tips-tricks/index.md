@@ -6,7 +6,7 @@ subtitle: "'20 Laravel Eloquent Tips and Tricks'의 번역 글입니다."
 description: "라라벨 엘로퀀트의 20가지 팁과 트릭들에 대해서 알아봅니다."
 type: "Laravel"
 created_at: "2021-01-04"
-updated_at: "2020-01-05"
+updated_at: "2021-01-05"
 blog: true
 text: true
 author: "silnex"
