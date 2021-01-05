@@ -238,14 +238,14 @@ $authors = $query->get();
 ## 10. BelongsTo 기본 모델
 포스트가 작성자에 속해있다고 할때 블레이드 코드는 다음과 같습니다.
 ```blade
-{{ $post->author->name }}
+{% raw %}{{ $post->author->name }}{% endraw %}
 ```
 
 하지만 만약 작성자가 삭제되거나, 다른이유로 설정되지 않는다면? 아마 “property of non-object” 같은 에러가 날것입니다.
 
 물론 아래 처럼 처리 할 수 도 있습니다.
 ```blade
-{{ $post->author->name ?? '' }}
+{% raw %}{{ $post->author->name ?? '' }}{% endraw %}
 ```
 
 하지만 엘로퀀트 relationship 딴에서 처리할 수 있습니다.
