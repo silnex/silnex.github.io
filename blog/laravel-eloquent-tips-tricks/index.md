@@ -6,7 +6,7 @@ subtitle: "'20 Laravel Eloquent Tips and Tricks'의 번역 글입니다."
 description: "라라벨 엘로퀀트의 20가지 팁과 트릭들에 대해서 알아봅니다."
 type: "Laravel"
 created_at: "2021-01-04"
-updated_at: "2021-01-05"
+updated_at: "2021-01-06"
 blog: true
 text: true
 author: "silnex"
@@ -15,7 +15,6 @@ header-img: "img/database.jpg"
 order: 5
 tags: ['laravel', 'eloquent', 'tip', 'translate']
 comments: true
-draft: true
 ---
 # 들어가며
 라라벨의 모델은 정말 다양한 방법으로 사용할 수 있고, 또한 많은 부분을 자동으로 처리해줍니다.  
@@ -268,12 +267,167 @@ public function author()
 ```
 
 ## 11. Order by Mutator
+이런 상황이 있다고 생각봅시다.
+```php
+function getFullNameAttribute()
+{
+  return $this->attributes['first_name'] . ' ' . $this->attributes['last_name'];
+}
+```
+
+`full_name`으로 정렬하고 싶다면 아래 코드는 동작하지 않습니다.
+```php
+$clients = Client::orderBy('full_name')->get(); // 작동안함
+```
+
+해답은 단순합니다. 우리는 데이터를 가져온 후 정렬 해야 합니다.
+```php
+$clients = Client::get()->sortBy('full_name'); // works!
+```
+함수이름이 다른것에 대해서 주의하세요, `orderBy`가 아니라 `sortBy`입니다.
+
 ## 12. 전역 범위에서의 기본 순서
+What if you want to have User::all() always be ordered by name field? You can assign a global scope. Let’s go back to the boot() method, which we mentioned already above.
+
+만일 `User::all()`을 호출할때 항상 `name`필드로 정렬된 값을 같고 싶다면, 전역 범위에서 할당할 수 있습니다. 위에서 이야기한 `boot()`메소드로 가 봅시다.
+```php
+protected static function boot()
+{
+    parent::boot();
+
+    // Order by name ASC
+    static::addGlobalScope('order', function (Builder $builder) {
+        $builder->orderBy('name', 'asc');
+    });
+}
+```
+더 자세한 내용은 [Query Scopes](https://laravel.com/docs/eloquent#query-scopes)를 확인해보세요
+
 ## 13. Raw query 메소드
+종종 엘로퀀트 대신에 Raw 쿼리들을 추가해야 할 때가 있습니다. 다행이도, 이를 위한 함수가 있습니다.
+```php
+// whereRaw
+$orders = DB::table('orders')
+    ->whereRaw('price > IF(state = "TX", ?, 100)', [200])
+    ->get();
+
+// havingRaw
+Product::groupBy('category_id')->havingRaw('COUNT(*) > 1')->get();
+
+// orderByRaw
+User::where('created_at', '>', '2016-01-01')
+  ->orderByRaw('(updated_at - created_at) desc')
+  ->get();
+```
+
 ## 14. 복제: 새로운 복재 행을 만듭니다.
+Short one. Without deep explanations, here’s the best way to make a copy of database entry:
+짧게 설명하면, 여기 데이터베이스 엔트리를 복사하는 가장 좋은 방법이 있습니다.
+```php
+$task = Tasks::find(1);
+$newTask = $task->replicate();
+$newTask->save();
+```
+
 ## 15. 큰 테이블을 위한 Chunk() 메소드
+엘로퀀트에 보단 Collection에 관련된 이야기지만, 매우 유용합니다. - 무거운 데이터 셋을 관리할 때, 작은 조각 들로 쪼개어 관리 할 수 있습니다.
+
+아래 예제 보단,
+```php
+$users = User::all();
+foreach ($users as $user) {
+  // ...
+```
+
+이렇게 사용할 수 있습니다.
+```php
+User::chunk(100, function ($users) {
+  foreach ($users as $user) {
+    // ...
+  }
+});
+```
+
 ## 16. 모델이 만들어 질 때 추가 항목들도 같이 만들기
+다음과 같은 커맨드는 이미 알고 있을겁니다.
+```bash
+php artisan make:model Company
+```
+
+하지만, 모델과 관련된 것들을 생성해주는 유용한 플래그들이 있습니다.
+```bash
+php artisan make:model Company -mcr
+```
+-m 마이그레이션 파일을 생성합니다.
+-c 컨트롤러 파일을 생성합니다.
+-r resourceful한 컨트롤러를 생성합니다.
+
 ## 17. 저장할 때 updated_at 덮어쓰기(Override)
+Did you know that ->save() method can accept parameters? As a result, we can tell it to “ignore” updated_at default functionality to be filled with current timestamp. See this:
+`->save()`메소드가 파라미터를 받는다는것을 알고 계셧나요? 결과적으로 우리는 현재 시간틀 기본으로 채워주는 `updated_at` 를 "무시" 할 수 있습니다.
+
+```php
+$product = Product::find($id);
+$product->updated_at = '2020-01-01 00:00:00';
+$product->save(['timestamps' => false]);
+```
+이제 `updated_at` 사전에 재정의한 것으로 정의 되어집니다.
+
 ## 18. update()의 결과는 무엇인가요?
+`update()` 실제 반환 값에 대해서 생각해 본적이 있으신가요?
+```php
+$result = $products->whereNull('category_id')->update(['category_id' => 2]);
+```
+I mean, the update is performed in the database, but what would that $result contain?
+내가 말하는건, 업데이트는 데이터베이스에서 실행됬지만, `$result`에는 무엇이 포함되어 있나요?
+
+정답은 영향을 받은 열입니다. 만약 여러분이 영향을 받은 행을 확인하고 싶다면, 따로 else 를 호출할 필요없이 `updated()`의 반환 값을 통해 알 수 있습니다.
 ## 19. 엘로퀀트 쿼리에서 괄호를 변경
+만약 SQL 쿼리에서 and-or을 섞어야 할땐 다음과 같이 할 수 있습니다.
+```sql
+... WHERE (gender = 'Male' and age >= 18) or (gender = 'Female' and age >= 65)
+```
+How to translate it into Eloquent? This is the wrong way:
+
+엘로퀀트로는 어떻게 구현할 수 있을가요? 여기 잘못된 방법이 있습니다.
+```php
+$q->where('gender', 'Male');
+$q->orWhere('age', '>=', 18);
+$q->where('gender', 'Female');
+$q->orWhere('age', '>=', 65);
+```
+
+위에순서는 잘못 되었습니다. 올바른 방법은 조금 더 복잡합니다. 클로저 함수를 사용해 서브 쿼리를 이용하여 작성할 수 있습니다.
+```php
+$q->where(function ($query) {
+  $query->where('gender', 'Male')
+    ->where('age', '>=', 18);
+})->orWhere(function($query) {
+  $query->where('gender', 'Female')
+    ->where('age', '>=', 65); 
+})
+```
 ## 20. orWhere와 멀티 파라미터
+
+마지막으로 `orWhere()`에 배열을 전달 할 수 있습니다.
+
+보통은 아래와 같이 작성하는데,
+```php
+$q->where('a', 1);
+$q->orWhere('b', 2);
+$q->orWhere('c', 3);
+```
+이렇게 작성 할 수 있습니다.
+```php
+$q->where('a', 1);
+$q->orWhere(['b' => 2, 'c' => 3]);
+```
+
+# 마치며
+마지막에 홍보 부분은 따로 번역 하지 않았습니다 <del>ㅎㅎ</del>  
+
+엘로퀀트를 사용하면서 가장 많이 사용했던 팁들이 아닌가 싶습니다.  
+만약 엘로퀀트를 좀 더 잘 다루고 싶으시다면, 이 글을 작성하신 분의 [Eloquent: Expert Level](https://laraveldaily.teachable.com/p/laravel-eloquent-expert-level) 강좌를 들어보시는 것도 좋을 것 같습니다.  
+
+개인적으로 추천하는 공부법(?)은 Eloquent를 구현한 Code를 직접 보시는 걸 추천드립니다.  
+또 git 로그와 함께 보면 만들어진 코드는 잘 수정되지도 않고 확장만으로 추가적인 기능들이 쌓여 가는 모습도 볼 수 있습니다!
