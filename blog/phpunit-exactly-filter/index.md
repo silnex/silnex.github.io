@@ -11,7 +11,7 @@ blog: true
 text: true
 author: "silnex"
 post-header: true
-header-img: "img/testing.jpg"
+header-img: "img/phpunit.png"
 order: 6
 tags: ['phpunit', 'laravel', 'tip', 'short-text']
 comments: true
