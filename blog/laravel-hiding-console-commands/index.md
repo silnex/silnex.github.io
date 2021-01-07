@@ -11,11 +11,13 @@ blog: true
 text: true
 author: "silnex"
 post-header: true
-header-img: "img/console.jpg"
+header-img: "img/console.png"
 order: 7
 tags: ['laravel', 'laravel-news', 'artisan', 'tip', 'translate', 'short-article']
 comments: true
 ---
+원본글: [Hiding Laravel Artisan Console Commands from the list of available commands](https://laravel-news.com/hiding-console-commands)
+
 만일 제품이나 패키지는 릴리즈 할 때, 설치만을 위해 사용되거나 특정 상황에서만 사용되는 Artisan 커맨드를 `php artisan`를 실행할 때 나오는 리스트에 표시하고 싶지 않을 수 있습니다.
 
 # Command 의 hidden 속성을 이용해 감추기
