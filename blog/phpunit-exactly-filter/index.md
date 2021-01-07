@@ -13,7 +13,7 @@ author: "silnex"
 post-header: true
 header-img: "img/phpunit.png"
 order: 6
-tags: ['phpunit', 'laravel', 'tip', 'short-text']
+tags: ['phpunit', 'laravel', 'tip', 'short-article']
 comments: true
 ---
 
