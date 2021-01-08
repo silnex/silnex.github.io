@@ -17,7 +17,7 @@ tags: ['php', 'rfc', 'array', 'operator', 'translate', 'short-article']
 comments: true
 ---
 
-> 기존의 글을 그대로 번역하지 않고 제가 필요한 부분을 추가하고, 재편집했습니다. 다만 원본 RFC은 [여기](https://wiki.php.net/rfc/array_unpacking_string_keys)서 확인하실 수 있습니다.
+> 기존의 글을 그대로 번역하지 않고 제가 필요한 부분을 추가하고, 재편집했습니다. 원본 RFC은 [여기](https://wiki.php.net/rfc/array_unpacking_string_keys)서 확인하실 수 있습니다.
 
 # PHP Array spread operator
 기존 5.6 부터 함수 인자를 전달([rfc](https://wiki.php.net/rfc/argument_unpacking)) 할 때 사용되던 spread 연산자(`...`)가 
