@@ -4,7 +4,7 @@ id: 8
 title:  "PHP key를 가진 배열의 spread 연산자 RFC"
 subtitle: "PHP key를 가진 배열의 spread 연산자에 작동 방식에 대한 RFC입니다."
 description: "PHP key를 가진 배열의 spread 연산자에 작동 방식에 대한 RFC입니다."
-type: "Laravel"
+type: "PHP"
 created_at: "2021-01-08"
 updated_at: "2021-01-08"
 blog: true
