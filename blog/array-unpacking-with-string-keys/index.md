@@ -1,9 +1,9 @@
 ---
 layout: post
 id: 8
-title:  "Artisan 명령 목록에서 Laravel Artisan 명령어 숨기기"
-subtitle: "'Hiding Laravel Artisan Console Commands from the list of available commands'의 번역 글입니다."
-description: "Artisan 명령 목록에서 Laravel Artisan 명령어 숨기기"
+title:  "PHP key를 가진 배열의 spread 연산자 RFC"
+subtitle: "PHP key를 가진 배열의 spread 연산자에 작동 방식에 대한 RFC입니다."
+description: "PHP key를 가진 배열의 spread 연산자에 작동 방식에 대한 RFC입니다."
 type: "Laravel"
 created_at: "2021-01-08"
 updated_at: "2021-01-08"
