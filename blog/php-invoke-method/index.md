@@ -13,7 +13,7 @@ author: "silnex"
 post-header: true
 header-img: "img/magic.jpg"
 order: 3
-tags: ['PHP', 'Magic method', '__invoke']
+tags: ['php', 'magic-method', '__invoke']
 series: 'php-magic-method-1'
 comments: true
 ---
