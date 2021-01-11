@@ -312,6 +312,10 @@ sup {
   }
 }
 
+.post-info + h1 {
+  padding-top: 0;
+}
+
 .catalogue-tag {
   font-family: $source;
   display: inline-block;
