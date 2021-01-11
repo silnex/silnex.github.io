@@ -1,7 +1,7 @@
 ---
 layout: post
 id: 9
-title:  "서비스 프로바이더에서 Boot와 Register의 차이와 사용시 주의할 점"
+title:  "서비스 프로바이더에서 Boot와 Register의 차이와 주의할 점"
 subtitle: "boot vs register in Service provider and Caution"
 description: "boot vs register의 차이점과 사용시 주의해야 하는 부분에 대해서 알아봅니다."
 type: "Laravel"
