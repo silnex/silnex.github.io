@@ -106,6 +106,7 @@ class AppServiceProvider extends ServiceProvider
     // ...
 }
 ```
+<figcaption>여기엔 실수가 있어요. <a href="/blog/laravel-service-providers-register-vs-boot/">이 글</a>을 확인해주세요!</figcaption>
 
 위와 같이 등록했다면, 이제 `Query` Class를 사용하는 모든 곳에서 `->search(...)`을 사용할 수 있습니다.
 
@@ -158,7 +159,7 @@ public function __call($method, $parameters)
 이 부분 까지 읽으셧다면, 정말 관심이 많으신 분이시겠지만,  
 이 부분이 이해되지 않으신다고 하셔도 [PHP Magic 메소드](https://www.php.net/manual/en/language.oop5.magic.php)와 PHP의 [기본적](https://www.php.net/manual/en/language.oop5.static.php)으로 [제공되어지는 부분](https://www.php.net/manual/en/class.closure.php)을 제외하고 생각하신다면, 좀 더 이해가 편하실 수도(?) 있습니다.
 
----
+<hr>
 
 ## Laravel Mixin
 
@@ -187,6 +188,7 @@ class QueryServiceProvider extends ServiceProvider
     // ...
 }
 ```
+<figcaption>여기엔 실수가 있어요. <a href="/blog/laravel-service-providers-register-vs-boot/">이 글</a>을 확인해주세요!</figcaption>
 
 하지만 이런 방식으로 Provider를 생성하면 `config/app.php`에
 ```php
@@ -236,6 +238,7 @@ Mixin Class의 구성 방식은 메소드 이름이 Macro의 이름, 그리고 �
     }
 // ...
 ```
+<figcaption>여기엔 실수가 있어요. <a href="/blog/laravel-service-providers-register-vs-boot/">이 글</a>을 확인해주세요!</figcaption>
 
 이렇게 여러메크로를 한번에 등록할 수 있습니다. 하지만, [`::class`](https://www.php.net/manual/en/language.oop5.basic.php#language.oop5.basic.class.class)를 사용해 아래 처럼 좀 더 다듬을 수 있습니다.
 
@@ -255,6 +258,7 @@ Mixin Class의 구성 방식은 메소드 이름이 Macro의 이름, 그리고 �
     }
 // ...
 ```
+<figcaption>여기엔 실수가 있어요. <a href="/blog/laravel-service-providers-register-vs-boot/">이 글</a>을 확인해주세요!</figcaption>
 
 이런식으로 한다면 관리도 편하고 분기문을 통해 production환경과 test 환경에서 사용할 Mixin들을 따로 등록 할 수 있습니다.
 
