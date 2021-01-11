@@ -110,4 +110,4 @@ Laravel에서 권장하는 바는 `Builder` facade가 등록(`register`) 되었�
 처음엔 register와 boot의 차이점을 간단히 정리 할까하며 시작한 검색인데,  
 여태까지 Service provider를 잘못 사용하고 있었다는 걸 알고나니 창피흡니드..ㅎㅎ;;
 
-<div style="text-align: right">Thumbnail designed by freepik</div>
+<div style="text-align:right;color:#ccc">Thumbnail designed by freepik</div>

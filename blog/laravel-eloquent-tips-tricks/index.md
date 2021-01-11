@@ -432,4 +432,4 @@ $q->orWhere(['b' => 2, 'c' => 3]);
 개인적으로 추천하는 공부법(?)은 Eloquent를 구현한 Code를 직접 보시는 걸 추천드립니다.  
 또 git 로그와 함께 보면 만들어진 코드는 잘 수정되지도 않고 확장만으로 추가적인 기능들이 쌓여 가는 모습도 볼 수 있습니다!
 
-<div style="text-align: right">Thumbnail designed by freepik</div>
+<div style="text-align:right;color:#ccc">Thumbnail designed by freepik</div>

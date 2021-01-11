@@ -66,4 +66,4 @@ bool(true)
  - `__invoke` 메소드가 선언된 클래스는 [`is_callable`](https://www.php.net/manual/en/function.is-callable.php)함수로 호출 가능하다 라고 표시됩니다.  
  - `$this`를 반환해 클래스 메소드들을 호출 할 수 있습니다. 
  
-<div style="text-align: right">Thumbnail designed by freepik</div>
+<div style="text-align:right;color:#ccc">Thumbnail designed by freepik</div>

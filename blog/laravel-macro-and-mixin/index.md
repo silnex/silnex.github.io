@@ -298,4 +298,4 @@ Mixin은 PHP의 [`ReflectionClass`](https://php.net/manual/en/class.reflectioncl
 
 하지만 이런 내용을 보고 laravel의 코드를 보면서 그 코드상에 있던 또 다른 방식을 알게되는 과정은 언제 격어도 참 흥미로운 것같습니다.
 
-<div style="text-align: right">Thumbnail designed by freepik</div>
+<div style="text-align:right;color:#ccc">Thumbnail designed by freepik</div>
