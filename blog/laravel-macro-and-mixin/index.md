@@ -293,3 +293,5 @@ Mixin은 PHP의 [`ReflectionClass`](https://php.net/manual/en/class.reflectioncl
 원래는 간단하게 Macro에 대해서 정리하려고 했지만, 생각보다 Macro가 많아질 수록 코드가 복잡해지고 ServiceProvider로 분리하던 중 좀 더 나은 방식이 있을까 하고 찾아보던중에 발견한 Mixin에 대해서 까지 작성하면서 내용이 많아졌습니다;;
 
 하지만 이런 내용을 보고 laravel의 코드를 보면서 그 코드상에 있던 또 다른 방식을 알게되는 과정은 언제 격어도 참 흥미로운 것같습니다.
+
+<div style="text-align: right">Thumbnail designed by freepik</div>
