@@ -11,7 +11,7 @@ blog: true
 text: true
 author: "silnex"
 post-header: true
-header-img: "img/provider.png"
+header-img: "img/provider.jpg"
 order: 9
 tags: ['laravel', 'tip', 'service-provider', 'short-article']
 comments: true
