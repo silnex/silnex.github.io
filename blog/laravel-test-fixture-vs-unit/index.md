@@ -22,7 +22,7 @@ comments: true
 # Laravel 코드상의 차이점
 Laravel 에선 다음과 같은 TEST 디렉토리 구조를 가집니다.
 ```
-tests`
+tests
   └ Fixture
     └ ExampleTest.php
   └ Unit
