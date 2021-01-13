@@ -36,7 +36,8 @@ tests
 기능 테스트는 `Tests\TestCase`를 상속 받고,   
 유닛 테스트는 `PHPUnit\Framework\TestCase`의 테스트를 상속 받습니다.
 
-이 두 `TestCase`의 차이는 Laravel의 `bootstrap`과정을 거치냐의 차이이고, 이 때문에 유닛 테스트의 `TestCase`는 Laravel의 helper, ORM 등을 사용할 수가 없습니다.
+이 두 `TestCase`의 차이는 Laravel의 `bootstrap`과정을 거치냐의 차이이고,   
+이 때문에 유닛 테스트의 `TestCase`는 Laravel의 helper, ORM 등을 사용할 수가 없습니다.
 
 하지만 `bootstrap`과정이 없기 때문에 그만큼 테스트 속도가 빠르다는 장점도 있죠.
 
