@@ -30,8 +30,9 @@ tests
   └ CreatesApplication.php
   └ TestCase.php
 ```
+기능 테스트와 유닛 테스트를 나눠 놓았습니다. 
 
-기능 테스트와 유닛 테스트를 나눠 놓고 진행하는데, 두 테스트의 가장 큰 차이는 확장 하는 부모 클래스인데,  
+두 테스트의 가장 큰 차이는 확장 하는 부모 클래스인데,  
 기능 테스트는 `Tests\TestCase`를 상속 받고,   
 유닛 테스트는 `PHPUnit\Framework\TestCase`의 테스트를 상속 받습니다.
 
