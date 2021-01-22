@@ -6,7 +6,7 @@ subtitle: "Laravel 8.23 Released 글의 번역글입니다."
 description: "[번역] 라라벨 8.23 릴리즈"
 type: "Laravel"
 created_at: "2021-01-21"
-updated_at: "2021-01-21"
+updated_at: "2021-01-22"
 blog: true
 text: true
 author: "silnex"
@@ -16,6 +16,8 @@ order: 12
 tags: ['laravel', 'laravel-news', 'release', 'translate', 'short-article']
 comments: true
 ---
+
+> [원본글 - Laravel 8.23 Released](https://laravel-news.com/laravel-8-23-0)
 
 Laravel 팀에서 laravel 8.23을 발표 했습니다.  
 이번 발표에는 새로운 `sole()` 쿼리 빌더 메소드와, `throw_if`와 `throw_unless`의 개선사항과 최신 변경사항들이 8.x 브랜치에 추가되었습니다.
