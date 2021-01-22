@@ -4,7 +4,7 @@ id: 12
 title:  "[번역] 라라벨 8.23 릴리즈"
 subtitle: "Laravel 8.23 Released 글의 번역글입니다."
 description: "[번역] 라라벨 8.23 릴리즈"
-type: "PHP"
+type: "Laravel"
 created_at: "2021-01-21"
 updated_at: "2021-01-21"
 blog: true
