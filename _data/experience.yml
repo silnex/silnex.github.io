@@ -1,14 +1,19 @@
-third-place:
 - name: Developer based in hack
   role: Laravel developer, with frontend.
   date: 2019. Sep - Present
 
-second-place:
 - name: 산업기능요원
   role: Research of Vulnerability
   date: 2018. Dec - 2021. Sep
 
-first-place:
+- name: UpRoot
+  role: Penetration test Researcher
+  date: 2016. Dec - 2019. Dec
+
 - name: Best of Best 5h
   role: Military track
   date: 2016. Mar - 2017. Jan
+
+- name: University of Suwon
+  role: Information security
+  date: 2015. Mar - ...
