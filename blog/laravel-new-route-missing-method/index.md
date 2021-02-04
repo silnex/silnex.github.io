@@ -38,3 +38,13 @@ Route::get('/locations/{location:slug}', [LocationsController::class, 'show'])
 이 `missing()` 메소드는 라우터 캐싱과 함께 작동하며, 라우트 모델 바인딩의 `ModelNotFound`예외가 발생할 때, 원하는 방식으로 정의하면 됩니다.
 
 Laravel을 사용하는 것을 매우 즐겁게 만드는 것은 이와 같은 기능입니다. 이 기능에 기여한 [Adam Campbell](https://github.com/hotmeteor)에게 박수를 보냅니다!
+
+# 마치며
+
+저번 쿼리 바인딩 분석때 진짜 없는시간 쪼개가면서 작업해서 그런지 번아웃이 온 것 같았네요ㅎㅎ  
+여전히 바쁘지만 그래도 앞으로 다양한 내용을 정리해서 올리고 싶네요!
+<br/>
+<br/>
+<br/>
+![slack](img/slack.png)
+<figcaption>다음글..?</figcaption>
