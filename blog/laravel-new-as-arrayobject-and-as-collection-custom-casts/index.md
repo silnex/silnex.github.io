@@ -22,22 +22,29 @@ comments: true
 [PR 설명](https://github.com/laravel/framework/pull/36245#issue-572631845)에 이번 Cast가 Laravel 8에 작업 속도를 높일 수 있는 내용들이 있습니다.
 
 > Laravel에는 JSON 텍스트를 배열 또는 컬렉션으로 케스팅해주는 기능이 있습니다.
+
 ```php
 $casts = ['options' => 'array'];
 ```
+
 > 하지만, 몇가지 단점을 가지고 있습니다. 먼저 아래 코드는 간단한 array 캐스팅으론 사용할 수 없습니다.
+
 ```php
 $user = User::find(1);
 $user->options['foo'] = 'bar';
 $user->save();
 ```
+
 > 개발자들은 동작 할 거라고 예상하지만 이 코드는 작동하지 않습니다. 이 'array' Cast에 의해 반환된 배열의 특정 값을 변경 하는 것은 불가능합니다. 그렇기에 아래와 같이 작성해야합니다.
+
 ```php
 $user = User::find(1);
 $user->options = ['foo' => 'bar'];
 $user->save();
 ```
+
 > 그러나 새로운 캐스트는 Eloquent의 커스텀 캐스트 기능을 활용해, 더 이해하기 쉬운 객체 관리 와 캐싱을 구현합니다. `AsArrayObject` 캐스트는 JSON 문자열을 PHP의 `ArrayObject` 인스턴스로 변환합니다. 이 클래스는 PHP의 스텐다드 라이브러리를 포함되어 있어 객체가 배열처럼 작동하도록 합니다. 이러한 접근 방식은 아래와 같은 코드를 가능하게 합니다.
+
 ```php
 // 모델에 선언된 casts...
 $casts = ['options' => AsArrayObject::class];
