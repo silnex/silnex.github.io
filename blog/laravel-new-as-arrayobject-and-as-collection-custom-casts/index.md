@@ -17,11 +17,11 @@ tags: ['laravel', 'laravel-news', 'translate', 'short-article']
 comments: true
 ---
 
-이번 중 릴리즈된 Laravel 8.28에는 Taylor Otwell가 컨트리뷰트한 두가지 새로운 Custom cast 탑이인 AsArrayObject, AsCollection가 있습니다. ArrayObject는 기존의 array와 JSON 캐스트에 비해 몇가지 장점이 있습니다.
+이번 주 릴리즈된 Laravel 8.28에는 Taylor Otwell가 기여한 두가지 새로운 Custom 캐스트 타입인 AsArrayObject, AsCollection가 있습니다. ArrayObject는 기존의 array와 JSON 캐스트에 비해 몇가지 장점이 있습니다.
 
-[PR 설명](https://github.com/laravel/framework/pull/36245#issue-572631845)에 이번 Cast가 Laravel 8에 작업 속도를 높일 수 있는 내용들이 있습니다.
+[PR 설명](https://github.com/laravel/framework/pull/36245#issue-572631845)에 이번 캐스트가 Laravel 8에 작업 속도를 높일 수 있는 내용들이 있습니다.
 
-> Laravel에는 JSON 텍스트를 배열 또는 컬렉션으로 케스팅해주는 기능이 있습니다.
+> Laravel에는 JSON 텍스트를 배열 또는 컬렉션으로 캐스팅해주는 기능이 있습니다.
 
 ```php
 $casts = ['options' => 'array'];
@@ -35,7 +35,7 @@ $user->options['foo'] = 'bar';
 $user->save();
 ```
 
-> 개발자들은 동작 할 거라고 예상하지만 이 코드는 작동하지 않습니다. 이 'array' Cast에 의해 반환된 배열의 특정 값을 변경 하는 것은 불가능합니다. 그렇기에 아래와 같이 작성해야합니다.
+> 개발자들은 동작 할 거라고 예상하지만 이 코드는 작동하지 않습니다. 이 'array' 캐스트에 의해 반환된 배열의 특정 값을 변경 하는 것은 불가능합니다. 그렇기에 아래와 같이 작성해야합니다.
 
 ```php
 $user = User::find(1);
@@ -68,4 +68,4 @@ PHP 문서에는 객체가 배열로 작동하도록 허용하는 내장 [ArrayO
 # 마치며
 설 때 저번에 말했던 laravel debug mode rce에 대해서 조사해보고 글을 쓰려고 했는데 정말 푹 쉬었네요ㅋㅋㅋ
 
-그래도 이번 개인 프로젝트중에 custom cast를 사용해보는 부분이 있는데 이게 생각보다 어려운 와중에 레퍼런스를 찾고 있었는데 아-듀 훌륭한 레퍼런스가 공개 된것같습니다.
+그래도 이번 개인 프로젝트중에 custom 캐스트를 다루는 부분이 있는데 이게 생각보다 어려운 와중에 레퍼런스를 찾고 있었는데 아-듀 훌륭한 레퍼런스가 공개 된것같습니다.
