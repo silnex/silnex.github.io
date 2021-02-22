@@ -15,7 +15,6 @@ header-img: "img/php-enum.png"
 order: 17
 tags: ["php", "8.1", "rfc", "enum", "new-feature"]
 comments: true
-draft: true
 ---
 
 PHP에서는 기존까지 별도의 Enum class를 지원하지 안호 따로 아래 처럼 class의 const(상수)를 선언해 사용했었습니다.
