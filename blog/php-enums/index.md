@@ -89,7 +89,8 @@ enum Status
 }
 ```
 
-여기서 중요한 건 `Status::SOMETHING`의 값이 '상수'나 '스칼라'값이 아닌 객체인겁니다.  
+여기서 중요한 건 `Status::SOMETHING`의 값이 '상수'나 '스칼라'값이 아닌 '객체'입니다.
+
 즉, 이를 이용해 아래처럼 사용할 수 있습니다.
 
 ```php
@@ -98,7 +99,7 @@ $status = Status::ARCHIVED;
 $status->color(); // 'red'
 ```
 
-또한, `enum` 객체는 `read-only` 속성인 `name`을 가지고 있어 이를 통해 이름을 가져올 수 있습니다.
+또한, `enum` 객체는 `read-only` 속성인 `name`을 가지고 있어 이를 통해 `enum`의 이름을 가져올 수 있습니다.
 
 ```php
 echo Status::ARCHIVED->name; // print 'ARCHIVED'
@@ -241,7 +242,7 @@ $list = [
 |비교 `Foo === Foo`|`false`|`true`|
 |Trait |✅|✅ (단, 속성 없이)|
 
-# 그외 추가 되는 기능들
+# 그 외 추가 되는 기능들
 ## `enum_exists` 함수가 추가됩니다.
 ```php
 function enum_exists(string $enum, bool $autoload = true): bool {}
