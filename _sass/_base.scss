@@ -65,10 +65,17 @@ img {
 
 table {
   width: 100%;
+  border-spacing: 0 0.5em;
 }
 
-td {
-  vertical-align: top;
+td, th {
+  vertical-align: middle;
+  padding-bottom: 0.4em;
+  border-bottom: #dbd1ff 1px solid;
+}
+
+th {
+  border-bottom: #dbd1ff 2px solid;
 }
 
 .transition {
