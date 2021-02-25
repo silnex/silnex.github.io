@@ -4,7 +4,7 @@ title: 엔티티 vs Value 객체(VO)
 subtitle: 이 둘에 차이점은?
 note: true
 article: false
-order: 1
+order: 2
 created_at: "2021-02-25"
 updated_at: "2021-02-25"
 ---
