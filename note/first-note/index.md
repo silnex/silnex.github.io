@@ -3,7 +3,7 @@ type: "Notice"
 title: 300자 내외로 정리하는 정보들
 subtitle: Hello, Note!
 note: true
-article: false
+article: "/blog/add-note-section"
 order: 1
 created_at: "2021-02-25"
 updated_at: "2021-02-25"
