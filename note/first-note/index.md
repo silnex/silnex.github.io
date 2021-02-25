@@ -1,8 +1,9 @@
 ---
+type: "Notice"
 title: 300자 내외로 정리하는 정보들
 subtitle: Hello, Note!
 note: true
-article: /blog/post
+article: false
 order: 1
 ---
 
