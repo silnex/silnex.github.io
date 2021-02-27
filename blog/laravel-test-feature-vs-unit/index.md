@@ -1,9 +1,9 @@
 ---
 layout: post
 id: 10
-title:  "기능(Fixture) 테스트 VS 유닛(Unit) 테스트"
-subtitle: "Laravel의 Fixture 테스트와 Unit 테스트의 다른점"
-description: "기능(Fixture) 테스트와 유닛(Unit) 테스트의 차이점을 확실히 하고, 개인적으로 쌓인 유닛 테스트에 대한 오해를 풀어 보려고 합니다."
+title:  "기능(Feature) 테스트 VS 유닛(Unit) 테스트"
+subtitle: "Laravel의 Feature 테스트와 Unit 테스트의 다른점"
+description: "기능(Feature) 테스트와 유닛(Unit) 테스트의 차이점을 확실히 하고, 개인적으로 쌓인 유닛 테스트에 대한 오해를 풀어 보려고 합니다."
 type: "Laravel"
 created_at: "2021-01-13"
 updated_at: "2021-01-13"
@@ -16,14 +16,14 @@ order: 10
 tags: ['laravel', 'tip', 'test', 'phpunit', 'short-article']
 comments: true
 ---
-이번 글을 쓰게된건 매번 기능(Fixture) 테스트와 유닛(Unit) 테스트의 차이점을 확실히 하고,  
+이번 글을 쓰게된건 매번 기능(Feature) 테스트와 유닛(Unit) 테스트의 차이점을 확실히 하고,  
 개인적으로 쌓인 유닛 테스트에 대한 오해를 풀어 보려고 합니다.
 
 # Laravel 코드상의 차이점
 Laravel 에선 다음과 같은 TEST 디렉토리 구조를 가집니다.
 ```
 tests
-  └ Fixture
+  └ Feature
     └ ExampleTest.php
   └ Unit
     └ ExampleTest.php
