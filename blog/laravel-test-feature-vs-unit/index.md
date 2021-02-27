@@ -6,7 +6,7 @@ subtitle: "Laravel의 Feature 테스트와 Unit 테스트의 다른점"
 description: "기능(Feature) 테스트와 유닛(Unit) 테스트의 차이점을 확실히 하고, 개인적으로 쌓인 유닛 테스트에 대한 오해를 풀어 보려고 합니다."
 type: "Laravel"
 created_at: "2021-01-13"
-updated_at: "2021-01-13"
+updated_at: "2021-02-28"
 blog: true
 text: true
 author: "silnex"
