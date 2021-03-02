@@ -1,4 +1,5 @@
 ---
+layout: note
 type: "Vocab"
 title: State vs. Status
 subtitle: State와 Status의 차이점
@@ -7,6 +8,7 @@ article: false
 order: 3
 created_at: "2021-03-01"
 updated_at: "2021-03-01"
+comments: true
 ---
 
 State: 사물이나 사람의 물리적, 정신적 상태  

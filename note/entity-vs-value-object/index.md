@@ -1,4 +1,5 @@
 ---
+layout: note
 type: Dev Design
 title: 엔티티 vs Value 객체(VO)
 subtitle: 이 둘에 차이점은?
@@ -7,6 +8,7 @@ article: false
 order: 2
 created_at: "2021-02-25"
 updated_at: "2021-02-25"
+comments: true
 ---
 
 객체를 식별할 때 방식이 다르다.  

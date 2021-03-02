@@ -30,6 +30,9 @@
     {% if page.project-header == true %}
         {% include project-header.html %}
     {% endif %}
+    {% if page.note == true %}
+      <div class="post-header loading-animation" style="background-image: url('/note/img/note-mail.jpg')"></div>
+    {% endif %}
       
     <main>
       {{ content }}

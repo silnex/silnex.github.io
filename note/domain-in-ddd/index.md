@@ -1,4 +1,5 @@
 ---
+layout: note
 type: "Dev Methodology"
 title: DDD에서의 Domain은?
 subtitle: Domain-Driven Design의 "Domain" 이란?
@@ -7,6 +8,7 @@ article: false
 order: 3
 created_at: "2021-03-02"
 updated_at: "2021-03-02"
+comments: true
 ---
 
 Domain-Driven Design (aka. DDD)에서의 도메인은 "사용되는 것"을 의미한다.  
