@@ -11,7 +11,7 @@ blog: true
 text: true
 author: "silnex"
 post-header: true
-header-img: "img/laravel-octane.jpg"
+header-img: "img/laravel-octane.png"
 order: 19
 tags: ["laravel", "laracon-2021", "laravel-news", "translate"]
 comments: true
