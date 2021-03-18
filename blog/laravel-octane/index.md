@@ -36,17 +36,18 @@ wrk -t4 -c50 http://localhost:8000/hello-world
 
 # 어떻게 동작하는 겁니까?
 
-Octane의 실행 방법은 Swoole나 RoadRunner와 같은 환경이 제공된 상태에서 Artisan 콘솔 커맨드(`octane:start`)으로 사용해 볼 수 있습니다.  
-또한 CPU에서 제공되는 환경에 따라 사용할 기술과 스레드 수를 지정할 수 있습니다.
+Octane의 실행 방법은 Swoole나 RoadRunner와 같은 환경이 제공된 상태에서 Artisan 콘솔 커맨드(`octane:start`)으로 사용해 볼 수 있습니다. 또한 CPU에서 제공되는 환경에 따라 사용할 기술과 스레드 수를 지정할 수 있습니다.
 
 ```bash
 artisan octane:start --workers=8 --server=roadrunner
 ```
 
-Swoole와 RoadRunner는 CPU 코어 수를 기반으로 여러 Worker 프로세스를 Fork(분기)시켜 PHP를 보다 효율적으로 실행할 수 있는 코루틴(coroutine)을 사용합니다.  
+Swoole와 RoadRunner는 CPU 코어 수를 기반으로 여러 Worker 프로세스를 Fork(분기)시켜 PHP를 보다 효율적으로 실행할 수 있는 코루틴(coroutine)을 사용합니다.
+
 Swoole/RoadRunner를 사용하면 메모리에 올려진 바이트코드를 사용해 오버해드를 최소화 할 수 있는 OPcache와 함께 PHP 앱의 startup 효율성을 높일 수 있습니다.
 
 PHP 워커는 요청과 요청 사이에 active 상태를 유지하면서 새로운 요청을 받을 대기를 합니다. ("x" 옵션을 통해 요청 후 순환(Cycle) 시킬 수 있습니다.(?))  
+
 프레임워크의 startup 시간을 제거하면서 무거운 HTTP 워크로드가 많은 어플리케이션에 많은 개선 효과가 있습니다.
 
 # 목적은 무엇입니까?
@@ -61,7 +62,7 @@ PHP 워커는 요청과 요청 사이에 active 상태를 유지하면서 새로
 Taylor가 말했듯이 Octane은 곧(아마도 몇 주내로) 출시를 기대하세요!  
 Laravel News는 Octane의 사전 출시 베타 버전이 될 최초 출시를 발표 할 것입니다.
 
-그 동안 [RoadRunner](https://roadrunner.dev/docs/intro-about)와 [Swoole PHP](https://www.swoole.co.uk/how-it-works)를 사용해 보며 익숙해지세요!
+그 동안 여러분들은 [RoadRunner](https://roadrunner.dev/docs/intro-about)와 [Swoole PHP](https://www.swoole.co.uk/how-it-works)를 사용해 보며 익숙해지세요!
 
 저희는 더 많은 Octane 소식을 기대하겠습니다!
 
