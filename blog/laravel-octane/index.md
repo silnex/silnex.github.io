@@ -3,7 +3,7 @@ layout: post
 id: 19
 title: "Laravel Octane"
 subtitle: "WOW. That's insane!"
-description: "Swoole과 RoadRunner와 같은 환경에서 제공되는 개-빠른 Laravel Octane"
+description: "Swoole과 RoadRunner 환경에서 제공되는 개-빠른 Laravel Octane"
 type: "Laravel"
 created_at: "2021-03-18"
 updated_at: "2021-03-18"
@@ -20,15 +20,13 @@ comments: true
 > [원본글 - Laravel Octane](https://laravel-news.com/laravel-octane)
 
 Taylor Otwell은 Laracon Online 2021에서 Laravel Octane을 처음 선보였습니다.  
-Laravel Octane은 [Swoole](https://www.swoole.co.uk/)와 [RoadRunner](https://roadrunner.dev/)와 같은 환경을 활용해 고성능의 Laravel을 실행하는 first-party 패키지 입니다.
+Laravel Octane은 [Swoole](https://www.swoole.co.uk/)와 [RoadRunner](https://roadrunner.dev/) 환경을 활용해 고성능의 Laravel을 실행하는 first-party 패키지 입니다.
 
 Octane은 데모에서 4개의 스레드를 사용해 동시에 50이상의 요청을 처리하는 "hello world"에서 초당 6,000개의 처리속도를 보여줬습니다.
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">WOW.<br><br>With the Octane Swool server running, 6000+ requests being handled by the framework.<br><br>That&#39;s insane! <a href="https://t.co/FGYoghib2D">pic.twitter.com/FGYoghib2D</a></p>&mdash; Laracon Online (@LaraconOnline) <a href="https://twitter.com/LaraconOnline/status/1372251742251802624?ref_src=twsrc%5Etfw">March 17, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-Here's an example of the command used during the demo as a rough benchmark example:
-
-아래 커맨드는 데모중에 사용한 밴치마크 커맨드중 예시 입니다. :
+아래 커맨드는 데모중에 사용한 밴치마크 커맨드 예시 입니다. :
 
 ```bash
 wrk -t4 -c50 http://localhost:8000/hello-world
@@ -36,7 +34,7 @@ wrk -t4 -c50 http://localhost:8000/hello-world
 
 # 어떻게 동작하는 겁니까?
 
-Octane의 실행 방법은 Swoole나 RoadRunner와 같은 환경이 제공된 상태에서 Artisan 콘솔 커맨드(`octane:start`)으로 사용해 볼 수 있습니다. 또한 CPU에서 제공되는 환경에 따라 사용할 기술과 스레드 수를 지정할 수 있습니다.
+Octane의 실행 방법은 Swoole나 RoadRunner와 같은 환경이 제공된 상태에서 Artisan 콘솔 커맨드(`octane:start`)으로 사용할 수 있습니다. 또한 CPU에 따라 사용할 기술과 스레드 수를 설정할 수 있습니다.
 
 ```bash
 artisan octane:start --workers=8 --server=roadrunner
