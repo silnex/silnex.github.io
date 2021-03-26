@@ -6,14 +6,14 @@ subtitle: "PHP key를 가진 배열의 spread 연산자에 작동 방식에 대�
 description: "PHP key를 가진 배열의 spread 연산자에 작동 방식에 대한 RFC입니다."
 type: "PHP"
 created_at: "2021-01-08"
-updated_at: "2021-01-08"
+updated_at: "2021-03-26"
 blog: true
 text: true
 author: "silnex"
 post-header: true
 header-img: "img/unpacking.png"
 order: 8
-tags: ['php', 'rfc', 'array', 'operator', 'translate', 'short-article']
+tags: ['php', '8.1', 'rfc', 'array', 'operator', 'translate', 'short-article']
 comments: true
 ---
 
@@ -118,3 +118,7 @@ call(a: 1);
 // Not:
 call(1);
 ```
+
+# [Updated] 2021. 03. 26.
+
+PHP RFC를 통과하면서 PHP 8.1에 추가되어집니다!
