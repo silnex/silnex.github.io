@@ -1,8 +1,8 @@
 ---
 layout: post
 id: 20
-title: "PHP의 git 서버가 해킹되었습니다."
-subtitle: "PHP가 공급망 공격을 당했습니다."
+title: "PHP가 해킹되었습니다."
+subtitle: "PHP가 공급망 공격에 피해를 입었습니다."
 description: "PHP의 깃 서버인 git.php.net이 공급망 공격을 당해 앞으론 github이 메인으로 사용되어집니다."
 type: "PHP"
 created_at: "2021-03-29"
