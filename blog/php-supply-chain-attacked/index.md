@@ -22,8 +22,8 @@ comments: true
 # TR; TL;
 
 PHP의 git 서버가 공급망 해킹에 당해 앞으로 php-src는 Github를 메인으로 사용합니다.  
-하지만 서버에 설치된 PHP가 취약한 것은 아닙니다.  
-다만, `php-src` 를 직접 컴파일하여 사용하시는 분은 악성 커밋([1](https://github.com/php/php-src/commit/c730aa26bd52829a49f2ad284b181b7e82a68d7d), [2](https://github.com/php/php-src/commit/2b0f239b211c7544ebc7a4cd2c977a5b7a11ed8a))이 소스코드에 포함되어 있는지 확인이 필요합니다.
+하지만 여러분에 서버에 설치된 PHP가 취약한 것은 아닙니다.  
+다만, `php-src`를 직접 컴파일하여 사용하시는 분은 악성 커밋([1](https://github.com/php/php-src/commit/c730aa26bd52829a49f2ad284b181b7e82a68d7d), [2](https://github.com/php/php-src/commit/2b0f239b211c7544ebc7a4cd2c977a5b7a11ed8a))이 소스코드에 포함되어 있는지 확인이 필요합니다.
 
 # 공급망 공격? (Supply chain attack)
 
@@ -64,4 +64,5 @@ PHP 보안팀과 Nikita Popov가 확인한 결과 악성 커밋이 완료된 후
 
 공급망 공격에 대한 경각심을 불러 일으킬만한 아주 좋은 예시가 이번에 생긴것같습니다. (PHP가 아니였음 했지만.. ㅜ)
 
-더욱이 기존 프로젝트들이 외부 패키지나 라이브러리를 많이 의존하고 있었는데, 이후 최대한 자체 패키지나, 패키지 도입에 대해서 신중히 고민할 필요성이 생긴 것 같습니다.
+더욱이 기존 프로젝트들이 외부 패키지나 라이브러리를 많이 의존하고 있었는데, 
+이후 자체 제작을 지향하거나, 패키지 도입에 신중히 고민할 필요성이 예전보다 더욱더 생긴 것 같습니다.
