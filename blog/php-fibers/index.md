@@ -17,7 +17,7 @@ tags: ["php", "hacking", "supply-chain-attack"]
 comments: true
 ---
 
-PHP 인터널 공지: https://news-web.php.net/php.internals/113838
+> PHP 인터널 공지: [https://news-web.php.net/php.internals/113838](https://news-web.php.net/php.internals/113838)
 
 # TR; TL;
 
