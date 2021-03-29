@@ -45,7 +45,7 @@ if ((Z_TYPE(PG(http_globals)[TRACK_VARS_SERVER]) == IS_ARRAY || zend_is_auto_glo
 	}
 }
 ```
-이 코드는 HTTP 헤더에 zerodium이 있을 때 User agent에 삽입된 PHP코드를 실행 시키는 악성 코드입니다.
+이 코드는 문자열이 `zerodium`으로 시작하는 경우 `User Agent` HTTP 헤더에 삽입된 PHP코드를 실행 시키는 악성 코드입니다.
 
 근데 이 악성커밋의 작성자가 PHP 주요 개발자인 `Nikita Popov`계정과 `Rasmus Lerdorf`계정으로 푸시되어 있어 [PHP internals](https://news-web.php.net/php.internals)에서 많은 이야기가 오고 갔습니다.
 
