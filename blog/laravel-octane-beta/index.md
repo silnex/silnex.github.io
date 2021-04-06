@@ -29,7 +29,6 @@ Laracon 데모에서 Octane이 6,000 req/s를 보여줬습니다! 아직 베타 
 
 그리고 우리는 Laravel 커뮤니티에서 [외부 패키지에 대한 Octane 테스트 중](https://twitter.com/themsaid/status/1379101925250043906)입니다. 강조하지만, Octane은 베타 상태입니다. [지금하고 있는 노력](https://twitter.com/taylorotwell/status/1378025903163342853)들은 Laravel 프레임워크 자체와 Octane이 정상적으로 작동하는지 확인하는 것이 목표 입니다.
 
-A recurring theme we've noticed from the early feedback is that service providers need to use the $app within the closure instead of the $this->app instance:
 초기 피드백을 통해 알게 된 반복적 테마는 서비스 공급업체가 $this->app 인스턴스 대신 $app을 클로즈업 내에서 사용해야 한다는 것입니다.
 
 초반 반복적인 피드백을 통해 알게된 것은 service provider가 `$this->app` 인스턴스 대신 `$app`을 클로저 안에서 사용해야 한다는 것 입니다.:
