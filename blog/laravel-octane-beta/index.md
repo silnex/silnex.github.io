@@ -17,9 +17,11 @@ tags: ["laravel", "laravel-octane", "laravel-news", "translate"]
 comments: true
 ---
 
+> [이전 Laravel Octane 소개글](/blog/laravel-octane)
+
 > [원본글 - The Laravel Octane Beta is Available](https://laravel-news.com/laravel-octane-beta)
 
-Swoole와 RoadRunner 환경에서 고성능 Laravel을 실행할 수 있는 패키지인 [`Laravel Octane`](/blog/laravel-octane) 베타 버전이 출시되었습니다!
+Swoole와 RoadRunner 환경에서 고성능 Laravel을 실행할 수 있는 패키지인 [Laravel Octane](/blog/laravel-octane) 베타 버전이 출시되었습니다!
 
 Laracon 데모에서 Octane이 6,000 req/s를 보여줬습니다! 아직 베타 버전이지만, Laravel팀은 Jetstream, Horizon, Spark 등과 같은 패키지와 호환성을 지키기위해 노력하고 있습니다.
 
