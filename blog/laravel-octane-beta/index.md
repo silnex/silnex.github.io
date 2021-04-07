@@ -50,7 +50,7 @@ Octane과 다른 어플리케이션이나 패키지를 테스트하면서 문제
 Octane의 도큐먼트에 참고 섹션에는 패키지 관리자가 Octane과 호환되도록 돕는 세부 정보들이 포함되어 있습니다.
 
 # 마치면서
-![octane-start](./img/octane-start.jpeg)
+![octane-start](img/octane-start.jpeg)
 
 <figcaption>Octane이 실행되는 UX의 모습이 영롱하네요..</figcaption>
 
@@ -62,5 +62,19 @@ Octane의 도큐먼트에 참고 섹션에는 패키지 관리자가 Octane과 �
 
 그리고 트위터에서 `Debugbar`라든지 그외 라라벨에서 많이 사용되는 패키지들의 지원 여부가 계속 올라오고 있네요!
 
-
 또 새로운 것 들을 테스트해 볼 생각에 가슴이 두근두근 하네요!
+
+## `artisan octane:start` vs `artisan serve` 단순비교
+
+정말 단순한 비교로 laravel sail을 이용해 Octane을 swoole로 구동한 것과 기존 laravel에 내장된 `artisan serve`를 단순 비교해보았습니다!
+
+```bash
+wrk -t4 -c50 http://localhost:80
+```
+
+![octane-start](img/compare.png)
+<figcaption>3배 가까이 차이가 나는군요 ㄷㄷ</figcaption>
+
+환경이 환경인지라 demo에 나왔던 6,000 req/s 가 나오진 않았지만, 기존 `artisan serve` 과 꾀 큰 차이를 보여줬습니다.
+
+실서비스에선 `artisan serve`를 사용하진 않지만, 그래도 같은 환경에서 저정도의 차이를 보여줬다는건 의미 심장하네요!
