@@ -73,8 +73,8 @@ wrk -t4 -c50 http://localhost:80
 ```
 
 ![octane-start](img/compare.png)
-<figcaption>3배 가까이 차이가 나는군요 ㄷㄷ</figcaption>
+<figcaption>(우 Octane/좌 serve)3배 가까이 차이가 나는군요 ㄷㄷ</figcaption>
 
-환경이 환경인지라 demo에 나왔던 6,000 req/s 가 나오진 않았지만, 기존 `artisan serve` 과 꾀 큰 차이를 보여줬습니다.
+환경이 환경인지라 demo에 나왔던 6,000 req/s 가 나오진 않았지만, 같은 환경에서 `artisan serve`와 꾀 큰 차이를 보여줬습니다.
 
 실서비스에선 `artisan serve`를 사용하진 않지만, 그래도 같은 환경에서 저정도의 차이를 보여줬다는건 의미 심장하네요!
