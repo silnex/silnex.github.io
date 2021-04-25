@@ -14,11 +14,11 @@ layout: default
                 <p class="catalogue-sub">
                     {{ page.subtitle }}
                 </p>
-                <pre class="catalogue-body">{{ page.content }}</pre>
+                <pre class="catalogue-body">{{ content }}</pre>
             </div>
             <div>
                 {% if page.article != false %}
-                <a href="{{ page.article }}">더보기</a>
+                    <a href="{{ page.article }}">더보기</a>
                 {% endif %}
             </div>
         </a>
