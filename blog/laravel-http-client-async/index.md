@@ -11,7 +11,7 @@ blog: true
 text: true
 author: "silnex"
 post-header: true
-header-img: "img/http-async.png"
+header-img: "img/async.png"
 order: 22
 tags: ["laravel", "http", "async", "new-feature"]
 comments: true
