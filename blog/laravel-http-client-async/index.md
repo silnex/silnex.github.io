@@ -5,8 +5,8 @@ title: "Laravel HTTP 비동기 요청"
 subtitle: "도큐먼트에도, PHP Doc에도 없는 따끈따끈한 기능"
 description: "HTTP Client async request"
 type: "Laravel"
-created_at: "2021-05-23"
-updated_at: "2021-05-23"
+created_at: "2021-05-24"
+updated_at: "2021-05-24"
 blog: true
 text: true
 author: "silnex"
