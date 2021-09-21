@@ -17,6 +17,13 @@ tags: ["laravel", "test", "http", "tip"]
 comments: true
 ---
 
+## TL;TR
+
+> 1\. HTTP client test 에서 `Http::fake(['url' => function () {}])` 이 가능하다.  
+> 2\. HTTP client test 에서 네트워크 에러를 발생시키고 싶다면,  
+`Http::fake(function () {throw new \Illuminate\Http\Client\ConnectionException();})`  
+으로 할 수 있다.
+
 # Laravel HTTP Client Test
 
 라라벨에는 HTTP Request를 쉽게 구현할 수 있는 [HTTP Client](https://laravel.com/docs/8.x/http-client)를 지원합니다.
@@ -140,9 +147,9 @@ try {
 }
 ```
 
-유저 피드에 대한 응답이 지연되어지거나 에러가 발생한 경우에 에러 정보를 저장하고 여러 로직등을 실행하고 있습니다.
+유저 피드에 대한 응답이 지연되거나 에러가 발생한 경우에 에러 정보를 저장하고 여러 로직등을 실행하고 있습니다.
 
-위와 같이 네트워크 딴에 문제가 생기 경우에 대한 `통합 테스트`를 하고 싶을 때, 문제가 발생합니다.
+위와 같이 네트워크에 문제가 생기는 경우, 에러에 대한 `통합 테스트` 할 때 문제가 발생합니다.
 
 1. 실행 중에 다른 API를 호출해야 해서 모든 Request를 Fake로 잡을 수 없다는 문제
 2. `Http::fake()`에서 강제로 Timeout을 일으키는 방법이 없음
