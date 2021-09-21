@@ -15,7 +15,6 @@ header-img: "img/http-testing.png"
 order: 23
 tags: ["laravel", "test", "http", "tip"]
 comments: true
-draft: true
 ---
 
 # Laravel HTTP Client Test
