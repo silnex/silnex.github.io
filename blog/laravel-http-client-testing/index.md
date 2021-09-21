@@ -90,7 +90,7 @@ Http::assertSent(function ($request) {
 
 # 타입 문제
 
-Fake 메소드를 사용할 때 callback으로 전달되는 타입이 정확하지 않아 IDE에서 자동완성이 안되거나, 잘못 타입을 잘못 설정해서 테스트가 깨지는 경우가 종종 있습니다.
+Fake 메소드를 사용할 때 callback으로 전달되는 타입이 정확하지 않아 IDE에서 자동완성이 안되거나, 타입을 잘못 설정해서 테스트가 깨지는 경우가 종종 있습니다.
 
 아래에 callback 파라미터에 대해서 타입과 내용을 상세하게 정리해 놓았습니다.
 
@@ -119,7 +119,8 @@ Http::fake([
 ])
 ```
 
-`\Illuminate\Http\Client\Request`는 그나마 이런 타입이겠거니 짐작이 가서 괜찮은데, return 타입이 `\GuzzleHttp\Promise\PromiseInterface`가 아니라 `Illuminate\Http\Client\Response` 으로 설정해놓고 한참을 헤맸습니다.
+`\Illuminate\Http\Client\Request`는 그나마 이런 타입이겠거니 짐작이 가서 괜찮은데,  
+return 타입이 `Illuminate\Http\Client\Response`이 아닌`\GuzzleHttp\Promise\PromiseInterface`라 오류가 발생하면 매번 헤맸던것 같습니다.
 
 # Timeout 문제 (Http client error test)
 
