@@ -7,8 +7,8 @@ header-img: img/note-mail.jpg
 ---
 
 <div class="catalogue-head">
-    <p class="catalogue-introduce">가볍게 알게된 내용들을 정리하는 Note입니다.</p>
-    <small class="text-muted">여기 내용들이 모여 하나의 글이 되죠</small>
+    <p class="catalogue-introduce">알게된 내용들을 가볍게 정리하는 Note Catalogue</p>
+    <small class="text-muted">작은 Note들이 모여 하나의 글이 되겠죠</small>
 </div>
 
 <ul class="catalogue">
