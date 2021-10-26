@@ -93,5 +93,22 @@
 }
 
 .note.catalogue-item:hover .catalogue-info {
-    opacity: unset;
+  opacity: unset;
+}
+
+.text-muted {
+  color: $grey-1;
+}
+
+.catalogue-head {
+  padding: 36px 0 10px 0;
+  text-align: right;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  color: rgba(0, 0, 0, 0.60);
+  .catalogue-introduce {
+    font-size: 20px;
+  }
+  .text-muted {
+    font-size: 12px;
+  }
 }
