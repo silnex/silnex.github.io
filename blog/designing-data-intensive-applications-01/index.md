@@ -1,7 +1,7 @@
 ---
 layout: post
 id: 24
-title: "데이터 중심 애플리케이션 설계 리뷰"
+title: "데이터 중심 애플리케이션 설계 정리"
 subtitle: "Part 1"
 description: "책을 읽으면서 내용을 정라하며 기록"
 type: "Book"
