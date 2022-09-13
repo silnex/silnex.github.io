@@ -11,7 +11,7 @@ blog: true
 text: true
 author: "silnex"
 post-header: true
-header-img: "img/self-vs-static.jpg"
+header-img: "img/self-vs-static.png"
 order: 27
 tags: ['php', 'self', 'static', 'tip']
 comments: true
