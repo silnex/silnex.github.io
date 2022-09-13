@@ -150,7 +150,8 @@ class A extends ParentClass
 
 (new A)->returnSelf()->message(); // "A message()"
 ```
-`returnSelf()->message()` 는 선언된 클래스인 `A`의 `message()` 메소드를 실행하게 되어 `"A constant"`를 출력 합니다.
+`returnSelf()->message()` 는 선언된 클래스인  
+`A`의 `message()` 메소드를 실행하게 되어 `"A constant"`를 출력 합니다.
 
 > [예제 코드](demo.php)
 
