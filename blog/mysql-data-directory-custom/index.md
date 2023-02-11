@@ -72,13 +72,13 @@ $ mkfs.ext4 /dev/vdb1
 
 #### 파티션 마운트
 
-1. 마운트할 위치를 만듭니다.
+- 마운트할 위치를 만듭니다.
 
 ```bash
 $ mkdir /mnt/data
 ```
 
-2. `/etc/fstab` 에 기록해 부팅시 자동으로 마운트 되게 합니다.
+- `/etc/fstab` 에 기록해 부팅시 자동으로 마운트 되게 합니다.
 
 ```bash
 $ vi /etc/fstab
@@ -89,7 +89,7 @@ $ vi /etc/fstab
 /dev/vdb1 /mnt/data ext4 defaults,noatime,nofail 0 0
 ```
 
-3. `mount /mnt/data` 를 이용해 마운트 합니다.
+- `mount /mnt/data` 를 이용해 마운트 합니다.
 
 이렇게 Block Storage 준비는 모두 완료 되었습니다.
 
