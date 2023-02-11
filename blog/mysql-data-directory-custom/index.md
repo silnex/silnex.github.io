@@ -5,8 +5,8 @@ title: "MySQL 테이블 저장 디렉토리 변경"
 subtitle: "MySQL TableSpace 삽질"
 description: "테이블의 저장 위치를 바꾸는 삽질을 기록한 내용입니다."
 type: "MYSQL"
-created_at: "2023-02-04"
-updated_at: "2023-02-04"
+created_at: "2023-02-11"
+updated_at: "2023-02-11"
 blog: true
 text: true
 author: "silnex"
