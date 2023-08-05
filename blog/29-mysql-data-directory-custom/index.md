@@ -59,9 +59,9 @@ class User extends Model
 
 ## Race Start!
 
-특정 페이지에 접속하면 User의 money 가 1 씩 올라가는 페이지가 있다고 해봅시다.
+특정 페이지에 접속하면 User의 money 가 1씩 올라가는 페이지가 있다고 해봅시다.
 
-그럴때 대게 아래와 같이 구현하게됩니다.
+그럴 때 대게 아래와 같이 구현하게 됩니다.
 
 ## 1번째 방법
 
@@ -70,10 +70,10 @@ $user->money += 1;
 $user->save();
 ```
 
-하지만 문제는 `$user->save()`가 완료되기 전에, 다음 요청이 들어오게 된다면 `$user->money` 값은 +1 하기 전의 값이기에 +1 이 한번만 적용 되게 됩니다.  
+하지만 문제는 `$user->save()`가 완료되기 전에, 다음 요청이 들어오게 된다면 `$user->money` 값은 +1 하기 전의 값이기에 +1 이 한 번만 적용 되게 됩니다.  
 ~~문의: 계좌에 돈이 사라졌어요~~
 
-이를 방지하기 위해선 `Pessimistic Lock` 을 사용해야합니다.
+이를 방지하기 위해선 `Pessimistic Lock` 을 사용해야 합니다.
 
 ## 2번째 방법: Pessimistic Lock
 
@@ -83,9 +83,9 @@ $user->money += 1;
 $user->save();
 ```
 
-`lockForUpdate()` 를 사용하면, 해당 쿼리가 완료될 때까지 다른 쿼리가 해당 데이터를 수정할 수 없게 됩니다.
+`lockForUpdate()`를 사용하면, 해당 쿼리가 완료될 때까지 다른 쿼리가 해당 데이터를 수정할 수 없게 됩니다.
 
-하지만 이 방법은 성능에 치명적인 영향을 끼칩니다.
+하지만 이 방법은 Lock이 되는동안 다른 프로세스가 대기하기에 성능 저하를 가져옵니다.
 
 ## 3번째 방법: Atomic Update
 
@@ -102,7 +102,7 @@ UPDATE `users` SET `money` = `money` + 1 WHERE `id` = 1
 
 # 테스트 결과
 
-[simple-laravel-race-condition-test](https://github.com/silnex/simple-laravel-race-condition-test) 프로젝트로 테스트한 결과를 보면 그 차이가 좀 더두들어 집니다.
+[simple-laravel-race-condition-test](https://github.com/silnex/simple-laravel-race-condition-test) 프로젝트로 테스트한 결과를 보면 그 차이가 좀 더 두드러집니다.
 
 ### 방법 1: 레이스 컨디션 발생
 ```php
