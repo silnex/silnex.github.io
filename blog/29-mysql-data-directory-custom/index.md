@@ -53,7 +53,7 @@ Github: [simple-laravel-race-condition-test](https://github.com/silnex/simple-la
 ```php
 class User extends Model
 {
-    protected $fillable = ['id', 'name', 'balance'];
+    protected $fillable = ['id', 'name', 'money'];
 }
 ```
 
