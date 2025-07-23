@@ -11,7 +11,7 @@ blog: true
 text: true
 author: "silnex"
 post-header: true
-header-img: ""
+header-img: "img/laravel-next.png"
 order: 31
 tags: ["laravel", "next.js", "CORS", "CSRF", "cookie", "session"]
 comments: true
